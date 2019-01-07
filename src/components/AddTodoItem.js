@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 
 class AddTodoItem extends Component {
   state = {
@@ -10,7 +11,7 @@ class AddTodoItem extends Component {
   onSubmitExample = (e) => {
     e.preventDefault();
     this.props.AddTodoItem(this.state.title);
-    // this.setState({ title: '' });
+    this.setState({ title: '' });
   }
 
 
@@ -34,6 +35,11 @@ class AddTodoItem extends Component {
       </form>
     );
   }
+}
+
+//PropTypes
+AddTodoItem.propTypes = {
+  AddTodoItem: PropTypes.func.isRequired
 }
 
 export default AddTodoItem
