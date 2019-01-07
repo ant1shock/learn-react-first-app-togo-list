@@ -20,9 +20,6 @@ class TodoItem extends Component {
       }
     }
 
-
-
-
   render() {
     const { id, title } = this.props.todo;
     return (
@@ -53,7 +50,5 @@ const btnStyle = {
 TodoItem.propTypes = {
   todo: PropTypes.object.isRequired
 }
-
-
 
 export default TodoItem
